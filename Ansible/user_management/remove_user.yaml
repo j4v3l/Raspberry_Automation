@@ -1,0 +1,9 @@
+- name: Remove default user
+  hosts: all
+
+  tasks:
+    - name: Removing default user and directories
+      user: name=pi
+        state=absent
+        force=yes
+      become: yes
